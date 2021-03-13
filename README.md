@@ -6,3 +6,12 @@
 (Click to play vid)
 ***
 
+ComplementaryShaders_3.11.zip
+
+Minecraft Java 1.12.2
+
+https://www.facebook.com/MinecraftWorldEditor/
+
+https://github.com/HakkaTjakka/MinecraftWorldEditor
+
+https://www.facebook.com/Pacman-Graphics-1601114056700700/
