@@ -1,0 +1,7 @@
+rename spiral_south_north_00.mcfunction spiral_south_north_starter_00.mcfunction
+rename spiral_south_north_01.mcfunction spiral_south_north_starter_01.mcfunction
+rename spiral_south_north_02.mcfunction spiral_south_north_starter_02.mcfunction
+rename spiral_south_north_03.mcfunction spiral_south_north_starter_03.mcfunction
+rename spiral_south_north_04.mcfunction spiral_south_north_starter_04.mcfunction
+rename spiral_south_north_05.mcfunction spiral_south_north_starter_05.mcfunction
+																

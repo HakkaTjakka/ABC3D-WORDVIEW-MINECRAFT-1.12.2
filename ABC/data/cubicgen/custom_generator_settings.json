@@ -1,0 +1,113 @@
+{
+	"waterLevel": 0,
+	"caves": false,
+	"strongholds": false,
+	"alternateStrongholdsPositions": false,
+	"villages": false,
+	"mineshafts": false,
+	"temples": false,
+	"oceanMonuments": false,
+	"woodlandMansions": false,
+	"ravines": false,
+	"dungeons": false,
+	"dungeonCount": 0,
+	"lakes": [],
+	"lavaOceans": false,
+	"biome": 0,
+	"biomeSize": 0,
+	"riverSize": 0,
+	"standardOres": [
+		{
+			"blockstate": {
+				"Name": "minecraft:dirt",
+				"Properties": {
+					"variant": "dirt",
+					"snowy": "false"
+				}
+			},
+			"biomes": null,
+			"placeBlockWhen": null,
+			"generateWhen": null,
+			"spawnSize": 33,
+			"spawnTries": 10,
+			"spawnProbability": 0.0625,
+			"minHeight": -Infinity,
+			"maxHeight": Infinity
+		},
+		{
+			"blockstate": {
+				"Name": "minecraft:gravel"
+			},
+			"biomes": null,
+			"placeBlockWhen": null,
+			"generateWhen": null,
+			"spawnSize": 33,
+			"spawnTries": 8,
+			"spawnProbability": 0.0625,
+			"minHeight": -Infinity,
+			"maxHeight": Infinity
+		},
+		{
+			"blockstate": {
+				"Name": "minecraft:stone",
+				"Properties": {
+					"variant": "granite"
+				}
+			},
+			"biomes": null,
+			"placeBlockWhen": null,
+			"generateWhen": null,
+			"spawnSize": 33,
+			"spawnTries": 10,
+			"spawnProbability": 0.20000000298023224,
+			"minHeight": -Infinity,
+			"maxHeight": 0.25
+		},
+		{
+			"blockstate": {
+				"Name": "minecraft:stone",
+				"Properties": {
+					"variant": "diorite"
+				}
+			},
+			"biomes": null,
+			"placeBlockWhen": null,
+			"generateWhen": null,
+			"spawnSize": 33,
+			"spawnTries": 10,
+			"spawnProbability": 0.20000000298023224,
+			"minHeight": -Infinity,
+			"maxHeight": 0.25
+		},
+		{
+			"blockstate": {
+				"Name": "minecraft:stone",
+				"Properties": {
+					"variant": "andesite"
+				}
+			},
+			"biomes": null,
+			"placeBlockWhen": null,
+			"generateWhen": null,
+			"spawnSize": 33,
+			"spawnTries": 10,
+			"spawnProbability": 0.20000000298023224,
+			"minHeight": -Infinity,
+			"maxHeight": 0.25
+		},
+		{
+			"blockstate": {
+				"Name": "minecraft:glowstone"
+			},
+			"biomes": null,
+			"placeBlockWhen": null,
+			"generateWhen": null,
+			"spawnSize": 4,
+			"spawnTries": 100,
+			"spawnProbability": 0.75,
+			"minHeight": -Infinity,
+			"maxHeight": 0.25
+		}
+	],
+	"version": 5
+}
