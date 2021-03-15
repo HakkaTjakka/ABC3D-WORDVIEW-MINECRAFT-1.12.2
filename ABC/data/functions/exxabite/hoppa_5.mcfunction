@@ -6,6 +6,10 @@ fill ~-1 ~ ~ ~1 ~ ~ air 0 replace glass 0
 fill ~ ~-1 ~ ~ ~1 ~ air 0 replace glass 0
 fill ~ ~ ~-1 ~ ~ ~1 air 0 replace glass 0
 
+fill ~-1 ~ ~ ~1 ~ ~ air 0 replace command_block 0
+fill ~ ~-1 ~ ~ ~1 ~ air 0 replace command_block 0
+fill ~ ~ ~-1 ~ ~ ~1 air 0 replace command_block 0
+
 fill ~-1 ~ ~ ~1 ~ ~ air 0 replace glowstone 0
 fill ~ ~ ~-1 ~ ~ ~1 air 0 replace glowstone 0
 

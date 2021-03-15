@@ -2,6 +2,8 @@ fill ~-1 ~-1 ~-1 ~1 ~1 ~1 planks 0 replace air 0
 
 fill ~-1 ~-1 ~-1 ~1 ~1 ~1 air 0 replace stained_glass 5
 fill ~-1 ~-1 ~-1 ~1 ~1 ~1 air 0 replace stained_glass 13
+fill ~-1 ~-1 ~-1 ~1 ~1 ~1 air 0 replace stained_glass 15
+fill ~-1 ~-1 ~-1 ~1 ~1 ~1 air 0 replace command_block 0
 fill ~-1 ~-1 ~-1 ~1 ~1 ~1 air 0 replace concrete 0
 fill ~-1 ~-1 ~-1 ~1 ~1 ~1 air 0 replace glowstone 0
 fill ~-1 ~-1 ~-1 ~1 ~1 ~1 air 0 replace concrete 13

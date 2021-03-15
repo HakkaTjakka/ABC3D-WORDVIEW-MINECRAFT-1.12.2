@@ -1762,6 +1762,5 @@ setblock ~-9 ~-8 ~7 concrete 4 keep
 setblock ~8 ~-8 ~-8 concrete 4 keep
 setblock ~7 ~8 ~7 concrete 4 keep
 setblock ~-8 ~-9 ~7 concrete 4 keep
-setblock ~ ~ ~ air 0
 setblock ~0 ~0 ~0 air 0
 fill ~0 ~0 ~0 ~0 ~0 ~0 repeating_command_block 0 keep {Command:"function abc:next_YDIR_X",auto:1b}
