@@ -1,0 +1,117 @@
+setblock ~ ~ ~ air 0
+fill ~ ~ ~ ~ ~ ~ command_block 0 keep {Command:"/function abc:current_ONE_I"}
+fill ~-1 ~ ~-1 ~1 ~ ~1 glowstone 0 replace glowstone 0
+fill ~-1 ~ ~-1 ~1 ~ ~1 glowstone 0 keep
+fill ~-1 ~ ~ ~-1 ~ ~ glowstone 0 replace redstone_block 0
+fill ~-5 ~-4 ~-6 ~-5 ~-4 ~-6 command_block 0 keep {Command:"function abc:DOWN"}
+setblock ~-5 ~-3 ~-6 light_weighted_pressure_plate 0 keep
+fill ~-4 ~-4 ~-5 ~-4 ~-4 ~-5 command_block 0 keep {Command:"function abc:UP"}
+setblock ~-4 ~-3 ~-5 light_weighted_pressure_plate 0 keep
+fill ~-3 ~-4 ~-6 ~-3 ~-4 ~-6 command_block 0 keep {Command:"function abc:NORTH"}
+setblock ~-3 ~-3 ~-6 light_weighted_pressure_plate 0 keep
+fill ~-2 ~-4 ~-5 ~-2 ~-4 ~-5 command_block 0 keep {Command:"function abc:SOUTH"}
+setblock ~-2 ~-3 ~-5 light_weighted_pressure_plate 0 keep
+fill ~-1 ~-4 ~-6 ~-1 ~-4 ~-6 command_block 0 keep {Command:"function abc:EAST"}
+setblock ~-1 ~-3 ~-6 light_weighted_pressure_plate 0 keep
+fill ~0 ~-4 ~-5 ~0 ~-4 ~-5 command_block 0 keep {Command:"function abc:WEST"}
+setblock ~0 ~-3 ~-5 light_weighted_pressure_plate 0 keep
+fill ~-6 ~-5 ~4 ~-6 ~-5 ~4 command_block 0 keep {Command:"function abc:NEXT_A_K"}
+setblock ~-6 ~-4 ~4 light_weighted_pressure_plate 0 keep
+fill ~-5 ~-5 ~3 ~-5 ~-5 ~3 command_block 0 keep {Command:"function abc:NEXT_B_J"}
+setblock ~-5 ~-4 ~3 light_weighted_pressure_plate 0 keep
+fill ~-4 ~-5 ~4 ~-4 ~-5 ~4 command_block 0 keep {Command:"function abc:NEXT_C_P"}
+setblock ~-4 ~-4 ~4 light_weighted_pressure_plate 0 keep
+fill ~-3 ~-5 ~3 ~-3 ~-5 ~3 command_block 0 keep {Command:"function abc:NEXT_D_W"}
+setblock ~-3 ~-4 ~3 light_weighted_pressure_plate 0 keep
+fill ~-2 ~-5 ~4 ~-2 ~-5 ~4 command_block 0 keep {Command:"function abc:NEXT_E_G"}
+setblock ~-2 ~-4 ~4 light_weighted_pressure_plate 0 keep
+fill ~-1 ~-5 ~3 ~-1 ~-5 ~3 command_block 0 keep {Command:"function abc:NEXT_F_X"}
+setblock ~-1 ~-4 ~3 light_weighted_pressure_plate 0 keep
+fill ~0 ~-5 ~4 ~0 ~-5 ~4 command_block 0 keep {Command:"function abc:NEXT_G_U"}
+setblock ~0 ~-4 ~4 light_weighted_pressure_plate 0 keep
+fill ~1 ~-5 ~3 ~1 ~-5 ~3 command_block 0 keep {Command:"function abc:NEXT_H_X"}
+setblock ~1 ~-4 ~3 light_weighted_pressure_plate 0 keep
+fill ~2 ~-5 ~4 ~2 ~-5 ~4 command_block 0 keep {Command:"function abc:NEXT_I_H"}
+setblock ~2 ~-4 ~4 light_weighted_pressure_plate 0 keep
+fill ~3 ~-5 ~3 ~3 ~-5 ~3 command_block 0 keep {Command:"function abc:NEXT_J_R"}
+setblock ~3 ~-4 ~3 light_weighted_pressure_plate 0 keep
+fill ~4 ~-5 ~4 ~4 ~-5 ~4 command_block 0 keep {Command:"function abc:NEXT_K_X"}
+setblock ~4 ~-4 ~4 light_weighted_pressure_plate 0 keep
+fill ~5 ~-5 ~3 ~5 ~-5 ~3 command_block 0 keep {Command:"function abc:NEXT_L_W"}
+setblock ~5 ~-4 ~3 light_weighted_pressure_plate 0 keep
+fill ~6 ~-5 ~4 ~6 ~-5 ~4 command_block 0 keep {Command:"function abc:NEXT_M_D"}
+setblock ~6 ~-4 ~4 light_weighted_pressure_plate 0 keep
+setblock ~0 ~-2 ~0 air 0
+fill ~0 ~-2 ~0 ~0 ~-2 ~0 command_block 0 keep {Command:"function abc:ERASE_A"}
+setblock ~0 ~-1 ~0 light_weighted_pressure_plate 0 keep
+setblock ~0 ~-1 ~1 glass 0
+setblock ~0 ~-1 ~-1 glass 0
+setblock ~1 ~-1 ~1 glass 0
+setblock ~1 ~-1 ~-1 glass 0
+setblock ~1 ~-1 ~ glass 0
+kill @e[type=Bat,r=8]
+summon minecraft:bat ~ ~5 ~
+summon minecraft:bat ~ ~5 ~
+fill ~6 ~-8 ~9 ~6 ~-8 ~9 wooden_button 3 keep
+fill ~6 ~7 ~9 ~6 ~7 ~9 stone_button 3 keep
+fill ~-7 ~-8 ~9 ~-7 ~-8 ~9 stone_button 3 keep
+fill ~-7 ~7 ~9 ~-7 ~7 ~9 wooden_button 3 keep
+fill ~7 ~-7 ~9 ~7 ~-7 ~9 wooden_button 3 keep
+fill ~7 ~6 ~9 ~7 ~6 ~9 wooden_button 3 keep
+fill ~-8 ~-7 ~9 ~-8 ~-7 ~9 wooden_button 3 keep
+fill ~-8 ~6 ~9 ~-8 ~6 ~9 wooden_button 3 keep
+fill ~6 ~-8 ~-10 ~6 ~-8 ~-10 stone_button 4 keep
+fill ~6 ~7 ~-10 ~6 ~7 ~-10 wooden_button 4 keep
+fill ~-7 ~-8 ~-10 ~-7 ~-8 ~-10 wooden_button 4 keep
+fill ~-7 ~7 ~-10 ~-7 ~7 ~-10 stone_button 4 keep
+fill ~7 ~-7 ~-10 ~7 ~-7 ~-10 wooden_button 4 keep
+fill ~7 ~6 ~-10 ~7 ~6 ~-10 wooden_button 4 keep
+fill ~-8 ~-7 ~-10 ~-8 ~-7 ~-10 wooden_button 4 keep
+fill ~-8 ~6 ~-10 ~-8 ~6 ~-10 wooden_button 4 keep
+fill ~9 ~-8 ~6 ~9 ~-8 ~6 stone_button 1 keep
+fill ~9 ~7 ~6 ~9 ~7 ~6 wooden_button 1 keep
+fill ~9 ~-8 ~-7 ~9 ~-8 ~-7 wooden_button 1 keep
+fill ~9 ~7 ~-7 ~9 ~7 ~-7 stone_button 1 keep
+fill ~9 ~-7 ~7 ~9 ~-7 ~7 wooden_button 1 keep
+fill ~9 ~6 ~7 ~9 ~6 ~7 wooden_button 1 keep
+fill ~9 ~-7 ~-8 ~9 ~-7 ~-8 wooden_button 1 keep
+fill ~9 ~6 ~-8 ~9 ~6 ~-8 wooden_button 1 keep
+fill ~-10 ~-8 ~6 ~-10 ~-8 ~6 wooden_button 2 keep
+fill ~-10 ~7 ~6 ~-10 ~7 ~6 stone_button 2 keep
+fill ~-10 ~-8 ~-7 ~-10 ~-8 ~-7 stone_button 2 keep
+fill ~-10 ~7 ~-7 ~-10 ~7 ~-7 wooden_button 2 keep
+fill ~-10 ~-7 ~7 ~-10 ~-7 ~7 wooden_button 2 keep
+fill ~-10 ~6 ~7 ~-10 ~6 ~7 wooden_button 2 keep
+fill ~-10 ~-7 ~-8 ~-10 ~-7 ~-8 wooden_button 2 keep
+fill ~-10 ~6 ~-8 ~-10 ~6 ~-8 wooden_button 2 keep
+fill ~6 ~7 ~7 ~6 ~7 ~7 command_block 0 keep {Command:"function abc:SOUTH_NEXT_J"}
+setblock ~-7 ~-8 ~7 air 0
+fill ~-7 ~-8 ~7 ~-7 ~-8 ~7 command_block 0 keep {Command:"function abc:SOUTH_ERASE"}
+fill ~6 ~-8 ~7 ~6 ~-8 ~7 command_block 0 keep {Command:"function abc:SOUTH_Y_NEG"}
+fill ~-7 ~7 ~7 ~-7 ~7 ~7 command_block 0 keep {Command:"function abc:SOUTH_Y_POS"}
+fill ~7 ~-7 ~7 ~7 ~-7 ~7 command_block 0 keep {Command:"function abc:SOUTH_X_POS"}
+fill ~-8 ~6 ~7 ~-8 ~6 ~7 command_block 0 keep {Command:"function abc:SOUTH_X_NEG"}
+fill ~-7 ~7 ~-8 ~-7 ~7 ~-8 command_block 0 keep {Command:"function abc:NORTH_NEXT_J"}
+setblock ~6 ~-8 ~-8 air 0
+fill ~6 ~-8 ~-8 ~6 ~-8 ~-8 command_block 0 keep {Command:"function abc:NORTH_ERASE"}
+fill ~6 ~7 ~-8 ~6 ~7 ~-8 command_block 0 keep {Command:"function abc:NORTH_Y_POS"}
+fill ~-7 ~-8 ~-8 ~-7 ~-8 ~-8 command_block 0 keep {Command:"function abc:NORTH_Y_NEG"}
+fill ~7 ~6 ~-8 ~7 ~6 ~-8 command_block 0 keep {Command:"function abc:NORTH_X_POS"}
+fill ~-8 ~-7 ~-8 ~-8 ~-7 ~-8 command_block 0 keep {Command:"function abc:NORTH_X_NEG"}
+fill ~7 ~7 ~-7 ~7 ~7 ~-7 command_block 0 keep {Command:"function abc:WEST_NEXT_J"}
+setblock ~7 ~-8 ~6 air 0
+fill ~7 ~-8 ~6 ~7 ~-8 ~6 command_block 0 keep {Command:"function abc:WEST_ERASE"}
+fill ~7 ~7 ~6 ~7 ~7 ~6 command_block 0 keep {Command:"function abc:WEST_Y_POS"}
+fill ~7 ~-8 ~-7 ~7 ~-8 ~-7 command_block 0 keep {Command:"function abc:WEST_Y_NEG"}
+fill ~7 ~6 ~7 ~7 ~6 ~7 command_block 0 keep {Command:"function abc:WEST_Z_POS"}
+fill ~7 ~-7 ~-8 ~7 ~-7 ~-8 command_block 0 keep {Command:"function abc:WEST_Z_NEG"}
+fill ~-8 ~7 ~6 ~-8 ~7 ~6 command_block 0 keep {Command:"function abc:EAST_NEXT_J"}
+setblock ~-8 ~-8 ~-7 air 0
+fill ~-8 ~-8 ~-7 ~-8 ~-8 ~-7 command_block 0 keep {Command:"function abc:EAST_ERASE"}
+fill ~-8 ~-8 ~6 ~-8 ~-8 ~6 command_block 0 keep {Command:"function abc:EAST_Y_NEG"}
+fill ~-8 ~7 ~-7 ~-8 ~7 ~-7 command_block 0 keep {Command:"function abc:EAST_Y_POS"}
+fill ~-8 ~-7 ~7 ~-8 ~-7 ~7 command_block 0 keep {Command:"function abc:EAST_Z_POS"}
+fill ~-8 ~6 ~-8 ~-8 ~6 ~-8 command_block 0 keep {Command:"function abc:EAST_Z_NEG"}
+setblock ~0 ~-5 ~0 air 0
+setblock ~0 ~-4 ~0 air 0 replace redstone_block 0
+fill ~0 ~-5 ~0 ~0 ~-5 ~0 command_block 0 keep {Command:"/function abc:letter_ONE_J"}
