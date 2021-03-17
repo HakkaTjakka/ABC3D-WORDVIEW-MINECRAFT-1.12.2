@@ -3,52 +3,61 @@ fill ~ ~ ~ ~ ~ ~ command_block 0 keep {Command:"/function abc:current_ONE_Z"}
 fill ~-1 ~ ~-1 ~1 ~ ~1 glowstone 0 replace glowstone 0
 fill ~-1 ~ ~-1 ~1 ~ ~1 glowstone 0 keep
 fill ~-1 ~ ~ ~-1 ~ ~ glowstone 0 replace redstone_block 0
-fill ~-5 ~-4 ~-6 ~-5 ~-4 ~-6 command_block 0 keep {Command:"function abc:DOWN"}
-setblock ~-5 ~-3 ~-6 light_weighted_pressure_plate 0 keep
-fill ~-4 ~-4 ~-5 ~-4 ~-4 ~-5 command_block 0 keep {Command:"function abc:UP"}
-setblock ~-4 ~-3 ~-5 light_weighted_pressure_plate 0 keep
-fill ~-3 ~-4 ~-6 ~-3 ~-4 ~-6 command_block 0 keep {Command:"function abc:NORTH"}
-setblock ~-3 ~-3 ~-6 light_weighted_pressure_plate 0 keep
-fill ~-2 ~-4 ~-5 ~-2 ~-4 ~-5 command_block 0 keep {Command:"function abc:SOUTH"}
-setblock ~-2 ~-3 ~-5 light_weighted_pressure_plate 0 keep
-fill ~-1 ~-4 ~-6 ~-1 ~-4 ~-6 command_block 0 keep {Command:"function abc:EAST"}
-setblock ~-1 ~-3 ~-6 light_weighted_pressure_plate 0 keep
-fill ~0 ~-4 ~-5 ~0 ~-4 ~-5 command_block 0 keep {Command:"function abc:WEST"}
-setblock ~0 ~-3 ~-5 light_weighted_pressure_plate 0 keep
-fill ~-6 ~-5 ~4 ~-6 ~-5 ~4 command_block 0 keep {Command:"function abc:NEXT_A_Z"}
+fill ~-6 ~-4 ~-6 ~-6 ~-4 ~-6 command_block 0 keep {Command:"function abc:DOWN"}
+setblock ~-6 ~-3 ~-6 light_weighted_pressure_plate 0 keep
+fill ~-5 ~-4 ~-5 ~-5 ~-4 ~-5 command_block 0 keep {Command:"function abc:UP"}
+setblock ~-5 ~-3 ~-5 light_weighted_pressure_plate 0 keep
+fill ~-4 ~-4 ~-6 ~-4 ~-4 ~-6 command_block 0 keep {Command:"function abc:NORTH"}
+setblock ~-4 ~-3 ~-6 light_weighted_pressure_plate 0 keep
+fill ~-3 ~-4 ~-5 ~-3 ~-4 ~-5 command_block 0 keep {Command:"function abc:SOUTH"}
+setblock ~-3 ~-3 ~-5 light_weighted_pressure_plate 0 keep
+fill ~-2 ~-4 ~-6 ~-2 ~-4 ~-6 command_block 0 keep {Command:"function abc:EAST"}
+setblock ~-2 ~-3 ~-6 light_weighted_pressure_plate 0 keep
+fill ~-1 ~-4 ~-5 ~-1 ~-4 ~-5 command_block 0 keep {Command:"function abc:WEST"}
+setblock ~-1 ~-3 ~-5 light_weighted_pressure_plate 0 keep
+fill ~1 ~-4 ~-6 ~1 ~-4 ~-6 command_block 0 keep {Command:"function abc:DOWN_B"}
+setblock ~1 ~-3 ~-6 light_weighted_pressure_plate 0 keep
+fill ~2 ~-4 ~-5 ~2 ~-4 ~-5 command_block 0 keep {Command:"function abc:UP_B"}
+setblock ~2 ~-3 ~-5 light_weighted_pressure_plate 0 keep
+fill ~3 ~-4 ~-6 ~3 ~-4 ~-6 command_block 0 keep {Command:"function abc:NORTH_B"}
+setblock ~3 ~-3 ~-6 light_weighted_pressure_plate 0 keep
+fill ~4 ~-4 ~-5 ~4 ~-4 ~-5 command_block 0 keep {Command:"function abc:SOUTH_B"}
+setblock ~4 ~-3 ~-5 light_weighted_pressure_plate 0 keep
+fill ~5 ~-4 ~-6 ~5 ~-4 ~-6 command_block 0 keep {Command:"function abc:EAST_B"}
+setblock ~5 ~-3 ~-6 light_weighted_pressure_plate 0 keep
+fill ~6 ~-4 ~-5 ~6 ~-4 ~-5 command_block 0 keep {Command:"function abc:WEST_B"}
+setblock ~6 ~-3 ~-5 light_weighted_pressure_plate 0 keep
+fill ~-6 ~-5 ~4 ~-6 ~-5 ~4 command_block 0 keep {Command:"function abc:NEXT_A_L"}
 setblock ~-6 ~-4 ~4 light_weighted_pressure_plate 0 keep
-fill ~-5 ~-5 ~3 ~-5 ~-5 ~3 command_block 0 keep {Command:"function abc:NEXT_B_Z"}
+fill ~-5 ~-5 ~3 ~-5 ~-5 ~3 command_block 0 keep {Command:"function abc:NEXT_B_A"}
 setblock ~-5 ~-4 ~3 light_weighted_pressure_plate 0 keep
-fill ~-4 ~-5 ~4 ~-4 ~-5 ~4 command_block 0 keep {Command:"function abc:NEXT_C_Q"}
+fill ~-4 ~-5 ~4 ~-4 ~-5 ~4 command_block 0 keep {Command:"function abc:NEXT_C_R"}
 setblock ~-4 ~-4 ~4 light_weighted_pressure_plate 0 keep
-fill ~-3 ~-5 ~3 ~-3 ~-5 ~3 command_block 0 keep {Command:"function abc:NEXT_D_W"}
+fill ~-3 ~-5 ~3 ~-3 ~-5 ~3 command_block 0 keep {Command:"function abc:NEXT_D_J"}
 setblock ~-3 ~-4 ~3 light_weighted_pressure_plate 0 keep
-fill ~-2 ~-5 ~4 ~-2 ~-5 ~4 command_block 0 keep {Command:"function abc:NEXT_E_P"}
+fill ~-2 ~-5 ~4 ~-2 ~-5 ~4 command_block 0 keep {Command:"function abc:NEXT_E_I"}
 setblock ~-2 ~-4 ~4 light_weighted_pressure_plate 0 keep
-fill ~-1 ~-5 ~3 ~-1 ~-5 ~3 command_block 0 keep {Command:"function abc:NEXT_F_I"}
+fill ~-1 ~-5 ~3 ~-1 ~-5 ~3 command_block 0 keep {Command:"function abc:NEXT_F_W"}
 setblock ~-1 ~-4 ~3 light_weighted_pressure_plate 0 keep
-fill ~0 ~-5 ~4 ~0 ~-5 ~4 command_block 0 keep {Command:"function abc:NEXT_G_G"}
+fill ~0 ~-5 ~4 ~0 ~-5 ~4 command_block 0 keep {Command:"function abc:NEXT_G_H"}
 setblock ~0 ~-4 ~4 light_weighted_pressure_plate 0 keep
-fill ~1 ~-5 ~3 ~1 ~-5 ~3 command_block 0 keep {Command:"function abc:NEXT_H_W"}
+fill ~1 ~-5 ~3 ~1 ~-5 ~3 command_block 0 keep {Command:"function abc:NEXT_H_Y"}
 setblock ~1 ~-4 ~3 light_weighted_pressure_plate 0 keep
-fill ~2 ~-5 ~4 ~2 ~-5 ~4 command_block 0 keep {Command:"function abc:NEXT_I_M"}
+fill ~2 ~-5 ~4 ~2 ~-5 ~4 command_block 0 keep {Command:"function abc:NEXT_I_X"}
 setblock ~2 ~-4 ~4 light_weighted_pressure_plate 0 keep
-fill ~3 ~-5 ~3 ~3 ~-5 ~3 command_block 0 keep {Command:"function abc:NEXT_J_C"}
+fill ~3 ~-5 ~3 ~3 ~-5 ~3 command_block 0 keep {Command:"function abc:NEXT_J_P"}
 setblock ~3 ~-4 ~3 light_weighted_pressure_plate 0 keep
-fill ~4 ~-5 ~4 ~4 ~-5 ~4 command_block 0 keep {Command:"function abc:NEXT_K_H"}
+fill ~4 ~-5 ~4 ~4 ~-5 ~4 command_block 0 keep {Command:"function abc:NEXT_K_R"}
 setblock ~4 ~-4 ~4 light_weighted_pressure_plate 0 keep
-fill ~5 ~-5 ~3 ~5 ~-5 ~3 command_block 0 keep {Command:"function abc:NEXT_L_X"}
+fill ~5 ~-5 ~3 ~5 ~-5 ~3 command_block 0 keep {Command:"function abc:NEXT_L_L"}
 setblock ~5 ~-4 ~3 light_weighted_pressure_plate 0 keep
-fill ~6 ~-5 ~4 ~6 ~-5 ~4 command_block 0 keep {Command:"function abc:NEXT_M_I"}
+fill ~6 ~-5 ~4 ~6 ~-5 ~4 command_block 0 keep {Command:"function abc:NEXT_M_P"}
 setblock ~6 ~-4 ~4 light_weighted_pressure_plate 0 keep
 setblock ~0 ~-2 ~0 air 0
 fill ~0 ~-2 ~0 ~0 ~-2 ~0 command_block 0 keep {Command:"function abc:ERASE_A"}
 setblock ~0 ~-1 ~0 light_weighted_pressure_plate 0 keep
 setblock ~0 ~-1 ~1 glass 0
 setblock ~0 ~-1 ~-1 glass 0
-setblock ~1 ~-1 ~1 glass 0
-setblock ~1 ~-1 ~-1 glass 0
-setblock ~1 ~-1 ~ glass 0
 kill @e[type=Bat,r=8]
 summon minecraft:bat ~ ~5 ~
 summon minecraft:bat ~ ~5 ~
