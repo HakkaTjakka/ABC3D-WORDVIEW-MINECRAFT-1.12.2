@@ -2,7 +2,11 @@
  Minecraft scrabble
 
 source: https://github.com/HakkaTjakka/ABC3D-WORDVIEW-MINECRAFT-1.12.2/tree/main/F2F
+randomizer with bats: https://github.com/HakkaTjakka/ABC3D-WORDVIEW-MINECRAFT-1.12.2/tree/main/F2F_RANDOM_RUNNER
 
+***
+[![Demo CountPages alpha](https://github.com/HakkaTjakka/ABC3D-WORDVIEW-MINECRAFT-1.12.2/blob/main/wordview_update.jpg)](https://www.youtube.com/embed/llx70TWFPRE)
+(Click to play vid)
 ***
 [![Demo CountPages alpha](https://github.com/HakkaTjakka/ABC3D-WORDVIEW-MINECRAFT-1.12.2/blob/main/wordview_upgrade.jpg)](https://www.youtube.com/embed/_6mdd3ePO_o)
 (Click to play vid)
