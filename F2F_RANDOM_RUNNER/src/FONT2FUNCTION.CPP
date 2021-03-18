@@ -11,6 +11,7 @@ void button(FILE* mcfunction, int x, int y, int z, char* name, int offset_x, int
 void button_B( int x, int y, int z, char* name, int offset_x, int offset_y, int offset_z, bool blockit );
 
 bool do_random=true;
+//bool do_random=false;
 
 int main(int argc, char ** argv) {
     srand(time(0));
@@ -415,19 +416,19 @@ void font2function_sub(int chain) {
 //            fprintf(mcfunction,"setblock ~ ~1 ~ light_weighted_pressure_plate 0 keep\n");
 
             if (do_random) {
-                button(mcfunction,      -6,     -4,      -6 , "DOWN",             0,-2, 0, l, true);
-                button(mcfunction,      -5,     -4,      -5 , "UP",               0, 2, 0, l, true);
-                button(mcfunction,      -4,     -4,      -6 , "NORTH",            0, 0,-2, l, true);
-                button(mcfunction,      -3,     -4,      -5 , "SOUTH",            0, 0, 2, l, true);
-                button(mcfunction,      -2,     -4,      -6 , "EAST",             2, 0, 0, l, true);
-                button(mcfunction,      -1,     -4,      -5 , "WEST",            -2, 0, 0, l, true);
+                button(mcfunction,      -6,     -4,      -6 , "DOWN",             0,-1, 0, l, true);
+                button(mcfunction,      -5,     -4,      -5 , "UP",               0, 1, 0, l, true);
+                button(mcfunction,      -4,     -4,      -6 , "NORTH",            0, 0,-1, l, true);
+                button(mcfunction,      -3,     -4,      -5 , "SOUTH",            0, 0, 1, l, true);
+                button(mcfunction,      -2,     -4,      -6 , "EAST",             1, 0, 0, l, true);
+                button(mcfunction,      -1,     -4,      -5 , "WEST",            -1, 0, 0, l, true);
 
-                button(mcfunction,       1,     -4,      -6 , "DOWN_B",           0,-3, 0, l, true);
-                button(mcfunction,       2,     -4,      -5 , "UP_B",             0, 3, 0, l, true);
-                button(mcfunction,       3,     -4,      -6 , "NORTH_B",          0, 0,-3, l, true);
-                button(mcfunction,       4,     -4,      -5 , "SOUTH_B",          0, 0, 3, l, true);
-                button(mcfunction,       5,     -4,      -6 , "EAST_B",           3, 0, 0, l, true);
-                button(mcfunction,       6,     -4,      -5 , "WEST_B",          -3, 0, 0, l, true);
+                button(mcfunction,       1,     -4,      -6 , "DOWN_B",           0,-1, 0, l, true);
+                button(mcfunction,       2,     -4,      -5 , "UP_B",             0, 1, 0, l, true);
+                button(mcfunction,       3,     -4,      -6 , "NORTH_B",          0, 0,-1, l, true);
+                button(mcfunction,       4,     -4,      -5 , "SOUTH_B",          0, 0, 1, l, true);
+                button(mcfunction,       5,     -4,      -6 , "EAST_B",           1, 0, 0, l, true);
+                button(mcfunction,       6,     -4,      -5 , "WEST_B",          -1, 0, 0, l, true);
 
                 static int a=next_letter;
                 button(mcfunction,       -6,     -5,       4 , "NEXT_A",     a, a, a, l, true); a=(rand())%26+1;
@@ -445,21 +446,28 @@ void font2function_sub(int chain) {
                 button(mcfunction,        6,     -5,       4 , "NEXT_M",     a, a, a, l, true); a=(rand())%26+1;
 
                 button(mcfunction,        0,     -2,       0 , "ERASE_A",        0, 0, 0, l, true);
-                fprintf(mcfunction,"setblock ~0 ~-1 ~1 glass 0\n");
-                fprintf(mcfunction,"setblock ~0 ~-1 ~-1 glass 0\n");
+                fprintf(mcfunction,"setblock ~ ~-1 ~1 glass 0\n");
+                fprintf(mcfunction,"setblock ~ ~-1 ~-1 glass 0\n");
+                fprintf(mcfunction,"setblock ~-1 ~-1 ~ glass 0\n");
+//                fprintf(mcfunction,"setblock ~1 ~-1 ~ glass 0\n");
+
 //                fprintf(mcfunction,"setblock ~1 ~-1 ~1 glass 0\n");
 //                fprintf(mcfunction,"setblock ~1 ~-1 ~-1 glass 0\n");
 //                fprintf(mcfunction,"setblock ~1 ~-1 ~ glass 0\n");
 
 //                button(mcfunction,        0,      -2,       2 , "ERASE_B",        0, 0, 0, l);
 
-////                fprintf(mcfunction,"summon minecraft:bat ~-4 ~3 ~4\n");
                 fprintf(mcfunction,"kill @e[type=Bat,r=8]\n");
 //                fprintf(mcfunction,"execute kill @e[type=Bat,r=10]\n");
 //                fprintf(mcfunction,"execute kill @e[type=Bat,r=10]\n");
+
                 fprintf(mcfunction,"summon minecraft:bat ~ ~5 ~\n");
                 fprintf(mcfunction,"summon minecraft:bat ~ ~5 ~\n");
-//                fprintf(mcfunction,"summon minecraft:bat ~4 ~3 ~-4\n");
+                fprintf(mcfunction,"summon minecraft:bat ~ ~5 ~\n");
+                fprintf(mcfunction,"summon minecraft:bat ~ ~5 ~\n");
+                fprintf(mcfunction,"summon minecraft:bat ~ ~5 ~\n");
+                fprintf(mcfunction,"summon minecraft:bat ~ ~5 ~\n");
+
             }
 
             fprintf(mcfunction,"fill ~%d ~%d ~%d ~%d ~%d ~%d wooden_button 3 keep\n",    n_z-2,      z+1,   n_z+1,    n_z-2,      z+1,   n_z+1);        // SOUTH    //Y--
@@ -724,11 +732,19 @@ void button(FILE* mcfunction, int x, int y, int z, char* name, int offset_x, int
             if (l==1) button_B( x, y, z, name, offset_x, offset_y, offset_z, blockit );
         } else {
 //            fprintf(mcfunction,"setblock ~%d ~%d ~%d air 0\n", x, y, z);
-            fprintf(mcfunction,"fill ~%d ~%d ~%d ~%d ~%d ~%d command_block 0 keep {Command:\"function abc:%s_%c\"}\n", x, y, z,  x, y, z, name, offset_x+64);
-            char new_name[100];
-            sprintf(new_name,"%s_%c",name, l+64);
-            button_B( x, y, z, new_name, offset_x, offset_x, offset_x, blockit );
-//            button_B( x, y, z, new_name, l, l, l );
+            if (blockit) {
+//                fprintf(mcfunction,"setblock ~%d ~%d ~%d air 0\n", x, y, z);
+                fprintf(mcfunction,"fill ~%d ~%d ~%d ~%d ~%d ~%d command_block 0 keep {Command:\"function abc:%s_%c\"}\n", x, y, z,  x, y, z, name, offset_x+64);
+                char new_name[100];
+                sprintf(new_name,"%s_%c",name, l+64);
+                button_B( x, y, z, new_name, offset_x, offset_x, offset_x, blockit );
+            } else {
+                fprintf(mcfunction,"setblock ~%d ~%d ~%d air 0\n", x, y, z);
+                fprintf(mcfunction,"fill ~%d ~%d ~%d ~%d ~%d ~%d command_block 0 keep {Command:\"function abc:%s_%c\"}\n", x, y, z,  x, y, z, name, offset_x+64);
+                char new_name[100];
+                sprintf(new_name,"%s_%c",name, l+64);
+                button_B( x, y, z, new_name, l, l, l, blockit );
+            }
         }
     } else {
 //        fprintf(mcfunction,"setblock ~%d ~%d ~%d air 0\n", x, y, z);
@@ -747,19 +763,80 @@ void button_B(int x, int y, int z, char* name, int offset_x, int offset_y, int o
 
     if (offset_x==offset_y && offset_y==offset_z) {
         if (offset_x==0 && offset_y==0 && offset_z==0) {
-            fprintf(button_file,"setblock ~%d ~%d ~%d air 0\n", -x, -y, -z);
-            fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d repeating_command_block 0 keep {Command:\"function abc:letter_ONE_REMOVE\",auto:1b}\n", -x, -y, -z, -x, -y, -z);
+
+          fprintf(button_file,"setblock ~%d ~%d ~%d air 0\n", -x, -y, -z);
+          fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d repeating_command_block 0 keep {Command:\"function abc:letter_ONE_REMOVE\",auto:1b}\n", -x, -y, -z, -x, -y, -z);
+
 //            fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d repeating_command_block 0 keep {Command:\"function abc:%s\",auto:1b}\n", -x, -y, -z, -x, -y, -z, name);
             fprintf(button_file,"particle explode ~%d ~%d ~%d 16 16 16 0.1 5000\n", -x, -y, -z);
             fprintf(button_file,"kill @e[type=Bat,r=8]\n");
 //            fprintf(button_file,"execute kill @e[type=Bat,r=9]\n");
 //            /kill @e[type=Bat,r=RADIUS]
 
+            if (blockit) {
+
+//                button(mcfunction,      -5,     -4,      -5 , "UP",               0, 1, 0, l, true);
+//                button(mcfunction,      -6,     -4,      -6 , "DOWN",             0,-1, 0, l, true);
+//                button(mcfunction,      -3,     -4,      -5 , "SOUTH",            0, 0, 1, l, true);
+//                button(mcfunction,      -4,     -4,      -6 , "NORTH",            0, 0,-1, l, true);
+//                button(mcfunction,      -1,     -4,      -5 , "WEST",            -1, 0, 0, l, true);
+//                button(mcfunction,      -2,     -4,      -6 , "EAST",             1, 0, 0, l, true);
+
+
+                fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d concrete 15 replace command_block\n",
+                         -x             - 5, -y+        -16   -4, -z               -5,
+                         -x             - 5, -y+        -16   -4, -z               -5);  //block up - down
+                fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d concrete 15 replace command_block\n",
+                         -x             - 6, -y+        +16   -4, -z               -6,
+                         -x             - 6, -y+        +16   -4, -z               -6);  //block down - up
+                fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d concrete 15 replace command_block\n",
+                         -x             - 3, -y+              -4, -z               -5 -16,
+                         -x             - 3, -y+              -4, -z               -5 -16);  //block south - north
+                fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d concrete 15 replace command_block\n",
+                         -x             - 4, -y+              -4, -z               -6 +16,
+                         -x             - 4, -y+              -4, -z               -6 +16);  //block north - south
+                fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d concrete 15 replace command_block\n",
+                         -x     +16     - 1, -y+              -4, -z               -5    ,
+                         -x     +16     - 1, -y+              -4, -z               -5    );  //block west - east
+                fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d concrete 15 replace command_block\n",
+                         -x    -16      - 2, -y+              -4, -z               -6    ,
+                         -x    -16      - 2, -y+              -4, -z               -6    );  //block east - west
+
+//                button(mcfunction,       2,     -4,      -5 , "UP_B",             0, 1, 0, l, true);
+//                button(mcfunction,       1,     -4,      -6 , "DOWN_B",           0,-1, 0, l, true);
+//                button(mcfunction,       4,     -4,      -5 , "SOUTH_B",          0, 0, 1, l, true);
+//                button(mcfunction,       3,     -4,      -6 , "NORTH_B",          0, 0,-1, l, true);
+//                button(mcfunction,       6,     -4,      -5 , "WEST_B",          -1, 0, 0, l, true);
+//                button(mcfunction,       5,     -4,      -6 , "EAST_B",           1, 0, 0, l, true);
+
+                fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d concrete 15 replace command_block\n",
+                         -x             + 2, -y+        -16   -4, -z               -5,
+                         -x             + 2, -y+        -16   -4, -z               -5);  //block up - down
+                fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d concrete 15 replace command_block\n",
+                         -x             + 1, -y+        +16   -4, -z               -6,
+                         -x             + 1, -y+        +16   -4, -z               -6);  //block down - up
+                fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d concrete 15 replace command_block\n",
+                         -x             + 4, -y+              -4, -z               -5 -16,
+                         -x             + 4, -y+              -4, -z               -5 -16);  //block south - north
+                fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d concrete 15 replace command_block\n",
+                         -x             + 3, -y+              -4, -z               -6 +16,
+                         -x             + 3, -y+              -4, -z               -6 +16);  //block north - south
+                fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d concrete 15 replace command_block\n",
+                         -x     +16     + 6, -y+              -4, -z               -5    ,
+                         -x     +16     + 6, -y+              -4, -z               -5    );  //block west - east
+                fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d concrete 15 replace command_block\n",
+                         -x    -16      + 5, -y+              -4, -z               -6    ,
+                         -x    -16      + 5, -y+              -4, -z               -6    );  //block east - west
+
+            }
+
+
+
         } else {
             fprintf(button_file,"setblock ~%d ~%d ~%d air 0\n", -x, -y, -z);
             fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d repeating_command_block 0 keep {Command:\"function abc:current_ONE_%c\",auto:1b}\n", -x, -y, -z, -x, -y, -z, offset_x+64);
 //            if (blockit) fprintf(button_file,"setblock ~ ~ ~ concrete 15\n");
-            if (blockit) fprintf(button_file,"fill ~ ~ ~ ~1 ~ ~1 concrete 15 replace command_block 0\n");
+            if (blockit) fprintf(button_file,"fill ~ ~ ~-1 ~1 ~ ~1 concrete 15 replace command_block 0\n");
 //            if (blockit) fprintf(button_file,"fill ~-1 ~ ~-1 ~1 ~ ~1 concrete 15 replace command_block 0\n");
 //            fprintf(button_file,"execute kill @e[type=Bat,distance=..9]\n");
         }
@@ -767,7 +844,55 @@ void button_B(int x, int y, int z, char* name, int offset_x, int offset_y, int o
 //        fprintf(button_file,"setblock ~%d ~%d ~%d air 0\"}\n", -x+offset_x*16, -y+offset_y*16, -z+offset_z*16);
         fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d repeating_command_block 0 keep {Command:\"function abc:current_ONE_A\",auto:1b}\n", -x+offset_x*16, -y+offset_y*16, -z+offset_z*16, -x+offset_x*16, -y+offset_y*16, -z+offset_z*16);
 //        if (blockit) fprintf(button_file,"setblock ~ ~ ~ concrete 15\n");
-        if (blockit) fprintf(button_file,"fill ~ ~ ~ ~1 ~ ~1 concrete 15 replace command_block 0\n");
+        if (blockit) {
+            fprintf(button_file,"fill ~ ~ ~ ~1 ~ ~1 concrete 15 replace command_block 0\n");
+
+                fprintf(button_file,"setblock ~%d ~%d ~%d air 0\n", -x, -y-1, -z+1);
+                fprintf(button_file,"setblock ~%d ~%d ~%d air 0\n", -x, -y-1, -z-1);
+//                fprintf(button_file,"setblock ~%d ~%d ~%d glass 0\n", -x+1, -y-1, -z);
+//                fprintf(button_file,"setblock ~%d ~%d ~%d glass 0\n", -x-1, -y-1, -z);
+
+        }
+
+        fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d concrete 15 replace command_block\n",
+                 -x  +offset_x*16           - 5, -y+  offset_y*16      -16   -4, -z  +offset_z*16             -5,
+                 -x  +offset_x*16           - 5, -y+  offset_y*16      -16   -4, -z  +offset_z*16             -5);  //block up - down
+        fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d concrete 15 replace command_block\n",
+                 -x  +offset_x*16           - 6, -y+  offset_y*16      +16   -4, -z  +offset_z*16             -6,
+                 -x  +offset_x*16           - 6, -y+  offset_y*16      +16   -4, -z  +offset_z*16             -6);  //block down - up
+        fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d concrete 15 replace command_block\n",
+                 -x  +offset_x*16           - 3, -y+  offset_y*16            -4, -z  +offset_z*16             -5 -16,
+                 -x  +offset_x*16           - 3, -y+  offset_y*16            -4, -z  +offset_z*16             -5 -16);  //block south - north
+        fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d concrete 15 replace command_block\n",
+                 -x  +offset_x*16           - 4, -y+  offset_y*16            -4, -z  +offset_z*16             -6 +16,
+                 -x  +offset_x*16           - 4, -y+  offset_y*16            -4, -z  +offset_z*16             -6 +16);  //block north - south
+        fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d concrete 15 replace command_block\n",
+                 -x  +offset_x*16   +16     - 1, -y+  offset_y*16            -4, -z  +offset_z*16             -5    ,
+                 -x  +offset_x*16   +16     - 1, -y+  offset_y*16            -4, -z  +offset_z*16             -5    );  //block west - east
+        fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d concrete 15 replace command_block\n",
+                 -x  +offset_x*16  -16      - 2, -y+  offset_y*16            -4, -z  +offset_z*16             -6    ,
+                 -x  +offset_x*16  -16      - 2, -y+  offset_y*16            -4, -z  +offset_z*16             -6    );  //block east - west
+
+        fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d concrete 15 replace command_block\n",
+                 -x  +offset_x*16           + 2, -y+  offset_y*16      -16   -4, -z  +offset_z*16             -5,
+                 -x  +offset_x*16           + 2, -y+  offset_y*16      -16   -4, -z  +offset_z*16             -5);  //block up - down
+        fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d concrete 15 replace command_block\n",
+                 -x  +offset_x*16           + 1, -y+  offset_y*16      +16   -4, -z  +offset_z*16             -6,
+                 -x  +offset_x*16           + 1, -y+  offset_y*16      +16   -4, -z  +offset_z*16             -6);  //block down - up
+        fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d concrete 15 replace command_block\n",
+                 -x  +offset_x*16           + 4, -y+  offset_y*16            -4, -z  +offset_z*16             -5 -16,
+                 -x  +offset_x*16           + 4, -y+  offset_y*16            -4, -z  +offset_z*16             -5 -16);  //block south - north
+        fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d concrete 15 replace command_block\n",
+                 -x  +offset_x*16           + 3, -y+  offset_y*16            -4, -z  +offset_z*16             -6 +16,
+                 -x  +offset_x*16           + 3, -y+  offset_y*16            -4, -z  +offset_z*16             -6 +16);  //block north - south
+        fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d concrete 15 replace command_block\n",
+                 -x  +offset_x*16   +16     + 6, -y+  offset_y*16            -4, -z  +offset_z*16             -5    ,
+                 -x  +offset_x*16   +16     + 6, -y+  offset_y*16            -4, -z  +offset_z*16             -5    );  //block west - east
+        fprintf(button_file,"fill ~%d ~%d ~%d ~%d ~%d ~%d concrete 15 replace command_block\n",
+                 -x  +offset_x*16  -16      + 5, -y+  offset_y*16            -4, -z  +offset_z*16             -6    ,
+                 -x  +offset_x*16  -16      + 5, -y+  offset_y*16            -4, -z  +offset_z*16             -6    );  //block east - west
+
+
 //        if (blockit) fprintf(button_file,"fill ~-1 ~ ~-1 ~1 ~ ~1 concrete 15 replace command_block 0\n");
     }
     fclose(button_file);
