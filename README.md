@@ -1,7 +1,8 @@
 # ABC3D WORDVIEW MINECRAFT 1.12.2
- Minecraft scrabble
+ Minecraft 1.12.2 scrabble .mcfunction generator / distance command block triggered train maze world generator .mcfunction generator with chickens inside stained glass
 
 source: https://github.com/HakkaTjakka/ABC3D-WORDVIEW-MINECRAFT-1.12.2/tree/main/F2F
+
 randomizer with bats: https://github.com/HakkaTjakka/ABC3D-WORDVIEW-MINECRAFT-1.12.2/tree/main/F2F_RANDOM_RUNNER
 
 ***
