@@ -6,7 +6,7 @@ source: https://github.com/HakkaTjakka/ABC3D-WORDVIEW-MINECRAFT-1.12.2/tree/main
 randomizer with bats: https://github.com/HakkaTjakka/ABC3D-WORDVIEW-MINECRAFT-1.12.2/tree/main/F2F_RANDOM_RUNNER
 
 ***
-[![Demo CountPages alpha](https://i9.ytimg.com/vi/tolw319IinU/mq2.jpg?sqp=CIztkIMG&rs=AOn4CLB-ejZIH26z9KJR8oWzEK3kBpzBhA)](https://www.youtube.com/embed/tolw319IinU)
+[![Demo CountPages alpha](https://github.com/HakkaTjakka/ABC3D-WORDVIEW-MINECRAFT-1.12.2/blob/main/dddUntitled.jpg)](https://www.youtube.com/embed/tolw319IinU)
 (Click to play vid)
 ***
 [![Demo CountPages alpha](https://github.com/HakkaTjakka/ABC3D-WORDVIEW-MINECRAFT-1.12.2/blob/main/train_maze2.jpg)](https://www.youtube.com/embed/_GeUZGVSD1Q)
